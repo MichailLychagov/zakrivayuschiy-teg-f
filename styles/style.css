@@ -292,11 +292,6 @@ label {
   margin-bottom: 20px;
 }
 
-.like-icon {
-  inline-size: 37px;
-  block-size: 32px;
-}
-
 .card__like-button {
   position: relative;
   display: flex;
@@ -376,8 +371,8 @@ label {
 }
 
 .like-icon {
-  inline-size: 39px;
-  block-size: 36px;
+  inline-size: 37px;
+  block-size: 32px;
   transition: 0.03s;
 }
 
