@@ -14,7 +14,501 @@
 
 */
 
+/* {
+  border: 1px solid red;
+}*/
+
+/*Шаг 6 Лейаут*/
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--content-font-variable);
+  font-variation-settings: "wght" 400, "wdth" var(--content-font-width),
+    "opsz" 0;
+  color: var(--main-color);
+  background-color: var(--accent-background-color);
+  background-image: var(--background-gradient-color);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*верствка header*/
+.header {
+  display: flex;
+  justify-content: center;
+  min-block-size: 667px;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  max-inline-size: var(--content-inline-size);
+  max-block-size: var(--content-block-size);
+  margin-block-start: 102px;
+  border: 2px solid var(--main-color);
+  background-color: var(--accent-background-color);
+  font-family: var(--content-font);
+  text-transform: uppercase;
+  inline-size: 100%;
+}
+
+.header-title {
+  font-size: var(--header-title-font-size);
+  font-weight: 400;
+  margin-block-start: 120px;
+}
+
+.header-subtitle {
+  font-size: var(--header-subtitle-font-size);
+  margin-block-start: 18px;
+}
+
+/*кнопки смены стиля*/
+.header__theme-menu {
+  margin-block-start: 25px;
+  margin-block-end: 25px;
+  margin-inline-start: 20px;
+}
+
+.theme-menu__list {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.theme-menu__button {
+  position: relative;
+  border: none;
+  background: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/*main content*/
+.main-content {
+  margin-block-start: clamp(-8.75rem, -3.2042rem + -23.662vw, -24.5rem);
+  display: grid;
+  justify-content: center;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: repeat(object-fill, 1fr);
+  border: 2px solid var(--main-color);
+  max-inline-size: var(--content-inline-size);
+  inline-size: 100%;
+  background-color: var(--accent-background-color);
+}
+
+.article__title {
+  inline-size: 100%;
+  padding: 5px 10px;
+  background-color: var(--accent-background-color);
+  outline: 2px solid var(--main-color);
+  margin-bottom: 2px;
+  font-size: var(--content-font-size);
+}
+
+.article__img__block {
+  position: relative;
+}
+
+.article__img {
+  display: block;
+  inline-size: 100%;
+  object-fit: cover;
+}
+
+.paragraph_description {
+  font-size: var(--content-font-size);
+  background-color: var(--accent-background-color);
+  line-height: var(--main-line-height);
+  padding: 25px 25px 0px 25px;
+}
+
+.paragraph {
+  font-size: var(--content-font-size);
+  background-color: var(--accent-background-color);
+  line-height: var(--main-line-height);
+  padding: 27px 25px 25px 25px;
+}
+
+.start-first-sprint {
+  margin-top: 50px;
+}
+
+.start-first-sprint .paragraph_description {
+  font-size: var(--content-font-size);
+  background-color: var(--accent-background-color);
+  line-height: var(--main-line-height);
+  padding: 25px 25px 0px 25px;
+}
+
+.start-first-sprint .paragraph {
+  font-size: var(--content-font-size);
+  background-color: var(--accent-background-color);
+  line-height: var(--main-line-height);
+  padding: 27px 25px 25px 25px;
+}
+
+.end-first-sprint {
+  margin-top: 52px;
+}
+
+.end-first-sprint .paragraph_description {
+  font-size: var(--content-font-size);
+  background-color: var(--accent-background-color);
+  line-height: var(--main-line-height);
+  padding: 25px 25px 0px 25px;
+}
+
+.end-first-sprint .paragraph {
+  font-size: var(--content-font-size);
+  background-color: var(--accent-background-color);
+  line-height: var(--main-line-height);
+  padding: 27px 25px 25px 25px;
+}
+
+.start-second-sprint {
+  margin-top: 50px;
+}
+
+.start-second-sprint .paragraph_description {
+  font-size: var(--content-font-size);
+  background-color: var(--accent-background-color);
+  line-height: var(--main-line-height);
+  padding: 25px 25px 0px 25px;
+}
+
+.start-second-sprint .paragraph {
+  font-size: var(--content-font-size);
+  background-color: var(--accent-background-color);
+  line-height: var(--main-line-height);
+  padding: 27px 25px 25px 25px;
+}
+
+.end-second-sprint {
+  margin-top: 50px;
+}
+
+.end-second-sprint .paragraph_description {
+  font-size: var(--content-font-size);
+  background-color: var(--accent-background-color);
+  line-height: var(--main-line-height);
+  padding: 27px 25px 0px 25px;
+}
+
+.end-second-sprint .paragraph {
+  font-size: var(--content-font-size);
+  background-color: var(--accent-background-color);
+  line-height: var(--main-line-height);
+  padding: 27px 25px 25px 25px;
+}
+
+.start-third-sprint {
+  margin-top: 50px;
+}
+
+.start-third-sprint .paragraph_description {
+  font-size: var(--content-font-size);
+  background-color: var(--accent-background-color);
+  line-height: var(--main-line-height);
+  padding: 27px 25px 0px 25px;
+}
+
+.start-third-sprint .paragraph {
+  font-size: var(--content-font-size);
+  background-color: var(--accent-background-color);
+  line-height: var(--main-line-height);
+  padding: 27px 25px 25px 25px;
+}
+
+.end-third-sprint {
+  margin-top: 49px;
+}
+
+.end-third-sprint .paragraph_description {
+  font-size: var(--content-font-size);
+  background-color: var(--accent-background-color);
+  line-height: var(--main-line-height);
+  padding: 26px 28.95px 0px 25px;
+}
+
+.end-third-sprint .paragraph {
+  font-size: var(--content-font-size);
+  background-color: var(--accent-background-color);
+  line-height: var(--main-line-height);
+  padding: 27px 25px 25px 25px;
+}
+
+.now-third-sprint {
+  margin-top: 49px;
+}
+
+.now-third-sprint .paragraph_description {
+  font-size: var(--content-font-size);
+  background-color: var(--accent-background-color);
+  line-height: var(--main-line-height);
+  padding: 26px 25.95px 0px 25px;
+}
+
+.now-third-sprint .paragraph {
+  font-size: var(--content-font-size);
+  background-color: var(--accent-background-color);
+  line-height: var(--main-line-height);
+  padding: 27px 25px 25px 25px;
+}
+
+/*Лейблы на карточках*/
+
+label {
+  position: absolute;
+  z-index: 2;
+  font-family: var(--content-font), sans-serif;
+  font-size: var(--lable-font-size);
+  color: var(--main-color);
+  text-transform: uppercase;
+  text-shadow: 0 0 1px var(--content-text-shadow);
+  inset-inline-end: 13px;
+  inset-block-start: 25px;
+  mix-blend-mode: hard-light;
+}
+
+/*кнопка like*/
+.feedback {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 26px;
+}
+
+.card__icon-button {
+  background: transparent;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.like-icon {
+  inline-size: 37px;
+  block-size: 32px;
+}
+
+.card__like-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-family: var(--content-font);
+  color: var(--color-button-text);
+  background-color: transparent;
+  border: 2px solid var(--main-color);
+  padding: 10px 40px;
+  font-size: var(--button-font-size);
+  inline-size: 130px;
+  block-size: 38px;
+  cursor: pointer;
+  justify-self: end;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.button__text {
+  color: var(--color-button-text);
+  position: relative;
+  mix-blend-mode: difference;
+  z-index: 2;
+}
+
+/*кнопка save*/
+
+.floppy {
+  inline-size: 28px;
+  block-size: 28px;
+}
+
+.save-button.floppy {
+  display: block;
+  inline-size: 28px;
+  block-size: 28px;
+  color: var(--color-button-text);
+  position: relative;
+  mix-blend-mode: difference;
+  z-index: 2;
+}
+
+#floppy {
+  fill: var(--color-button-text);
+  mix-blend-mode: difference;
+  z-index: 2;
+}
+
+.save {
+  margin-block-start: 54px;
+}
+
+.save-button {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--main-color);
+  background: var(--accent-background-color);
+  min-inline-size: 309px;
+  min-block-size: 81px;
+  overflow: hidden;
+}
+
+.save-button-link {
+  font-family: var(--content-font);
+  font-size: var(--button-font-size);
+  text-decoration: none;
+  color: var(--color-button-text);
+  line-height: 12.6px;
+  position: relative;
+  mix-blend-mode: difference;
+  z-index: 2;
+}
+
+.like-icon {
+  inline-size: 39px;
+  block-size: 36px;
+  transition: 0.03s;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+/*Шаг 12 Диалог*/
+
+#dialog-id {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  font-family: var(--content-font);
+  font-size: var(--button-font-size);
+  text-transform: uppercase;
+  color: var(--main-color);
+  background: var(--accent-background-color);
+  inline-size: 341px;
+  block-size: 195px;
+  padding: 30px 42px;
+  gap: 30px;
+  inset: 0;
+}
+
+dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+}
+
+#dialog-id::backdrop {
+  background: #000;
+  opacity: 0.75;
+}
+
+.dialog-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  block-size: 63px;
+}
+
+.dialog-info #floppy {
+  inline-size: 39px;
+  aspect-ratio: 1/1;
+}
+
+.dialog-text {
+  inline-size: 198px;
+  line-height: 150%;
+}
+
+.confirm {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: none;
+  outline: 2px solid var(--main-color);
+  inline-size: 257px;
+  background: transparent;
+  padding: 12.5px 114.5px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.confirm__text {
+  color: var(--color-button-text);
+  position: relative;
+  mix-blend-mode: difference;
+  z-index: 2;
+}
+
+/*Шаг 14 Фильтры*/
+.zero-sprint__img {
+  filter: brightness(200%);
+}
+
+.firsts-sprint__img {
+  filter: blur(0.3rem);
+}
+
+.firste-sprint__img {
+  filter: contrast(40%);
+}
+
+.seconds-sprint__img {
+  filter: blur(0.3rem);
+}
+
+.seconde-sprint__img {
+  filter: hue-rotate(-90deg);
+}
+
+.thirds-sprint__img {
+  filter: opacity(0.8);
+}
+
+.thirde-sprint__img {
+  filter: saturate(50%);
+}
+
+.snow-third-sprint__img {
+  filter: sepia(1) brightness(150%) contrast(2);
+}
+
+@media (width >= 768px) {
+  .header-content {
+    padding-top: 15px;
+  }
+  .main-content {
+    margin-block-start: clamp(-6.15rem, -3.2042rem + -23.662vw, -24.5rem);
+  }
+
+  .save-button {
+    flex-direction: row;
+    min-inline-size: 340px;
+    min-block-size: 55px;
+  }
+
+  .save-button .floppy {
+    inline-size: 21px;
+    block-size: 21px;
+  }
+
+  .save-button.floppy {
+    display: block;
+    inline-size: 21px;
+    block-size: 21px;
+  }
 }

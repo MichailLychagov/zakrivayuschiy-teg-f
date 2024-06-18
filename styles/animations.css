@@ -12,3 +12,240 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+/*Шаг 8 Анимация в шапке*/
+
+.theme-menu__button:disabled {
+  pointer-events: none;
+  opacity: 0.6;
+  transition: ease 0.3s;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+  transition: ease 0.3s;
+}
+
+.theme-menu__button::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  margin-top: 2px;
+  transition: width 0.5s;
+  background-color: var(--main-color);
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus::after {
+  width: 100%;
+}
+
+.link-nice:hover::after {
+  width: 100%;
+}
+
+.theme-menu__button:disabled:before {
+  content: "▶";
+  position: absolute;
+  inset-inline-start: -15px;
+  transform: translateY(-50%);
+  animation: arrow 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes arrow {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(4px);
+  }
+}
+
+/*Шаг 9 Анимации кнопок
+кнопка like*/
+.card__like-button:focus {
+  outline: none;
+}
+
+.card__like-button:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--main-color);
+  transition: ease 0.3s;
+}
+
+.card__like-button:after {
+  content: "";
+  position: absolute;
+  background: var(--main-color);
+  transform: translateX(-100%);
+  inset: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.card__like-button:hover:after {
+  transform: translateX(0%);
+}
+
+.button__text:hover {
+  mix-blend-mode: difference;
+  z-index: 2;
+}
+
+/*состояния кнопки save*/
+
+.save-button:focus {
+  outline: none;
+}
+
+.save-button:after {
+  content: "";
+  background: var(--main-color);
+  position: absolute;
+  transform: translateX(-100%);
+  inset: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.save-button:hover:after {
+  transform: translateX(0%);
+}
+
+.save-button:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--main-color);
+  transition: ease 0.3s;
+}
+
+.save-button:hover .floppy {
+  mix-blend-mode: difference;
+  z-index: 2;
+}
+
+.save-button:hover .save-button-link {
+  mix-blend-mode: difference;
+  z-index: 2;
+}
+
+/*Шаг 9 фокус на кнопке с сердцем*/
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--main-color);
+  transition: 0.3s ease;
+  block-size: 32px;
+}
+
+/* Шаг 10 Подготовка SVG"*/
+
+.contour {
+  transition: 0.3s;
+}
+
+.main-body {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.core {
+  opacity: 0;
+  transition-delay: 0.03s;
+  transition: 0.3s;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+/* Шаг 11 Анимация сердца"*/
+
+.card__icon-button:hover .core {
+  transition-delay: 0.03s;
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.card__icon-button:hover .main-body {
+  transition-delay: 0.05s;
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.card__icon-button:active .core {
+  --core-fill: #ff0000;
+  transition-delay: 0.03s;
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.card__icon-button:active .main-body {
+  --main-body-fill: #ff0000;
+  transition-delay: 0.05s;
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.card__icon-button:active .contour {
+  --heart-contour: #ff0000;
+  transition-delay: 0.06s;
+  transition: 0.3s;
+}
+
+.like-icon.is-liked:active .contour,
+.like-icon.is-liked:active .main-body,
+.like-icon.is-liked:active .core {
+  animation: scale-icon 0.3s 0.1s ease-in alternate;
+}
+
+.like-icon.is-liked:active .sparks {
+  animation: sparks 0.3s 0.3s ease-in alternate;
+}
+
+.like-icon.is-liked .contour {
+  transform: 0.1s;
+}
+
+@keyframes scale-icon {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes sparks {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*Шаг 12 Анимация Диалог*/
+
+.confirm:after {
+  content: "";
+  position: absolute;
+  background: var(--main-color);
+  transform: translateX(-100%);
+  inset: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.confirm:hover:after {
+  transform: translateX(0%);
+}
+
+.confirm__text:hover {
+  mix-blend-mode: difference;
+  z-index: 2;
+}
