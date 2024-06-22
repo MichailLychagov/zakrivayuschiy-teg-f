@@ -21,9 +21,12 @@
   transition: ease 0.3s;
 }
 
+.theme-menu:hover {
+  transition: ease 0.3s;
+}
+
 .theme-menu__button:hover {
   opacity: 0.6;
-  transition: ease 0.3s;
 }
 
 .theme-menu__button::after {
@@ -37,7 +40,6 @@
 }
 
 .theme-menu__button:focus {
-  outline: none;
   opacity: 0.6;
 }
 
@@ -52,6 +54,8 @@
 .theme-menu__button:disabled:before {
   content: "▶";
   position: absolute;
+  top: 0;
+  left: 0;
   inset-inline-start: -15px;
   transform: translateY(-50%);
   animation: arrow 0.5s ease-in-out infinite alternate;
@@ -68,15 +72,18 @@
 }
 
 /*Шаг 9 Анимации кнопок
-кнопка like*/
-.card__like-button:focus {
+/*общие стили для кнопок*/
+
+button:focus {
   outline: none;
 }
 
-.card__like-button:focus-visible {
+button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--main-color);
   transition: ease 0.3s;
 }
+
+/*кнопка like*/
 
 .card__like-button:after {
   content: "";
@@ -98,10 +105,6 @@
 
 /*состояния кнопки save*/
 
-.save-button:focus {
-  outline: none;
-}
-
 .save-button:after {
   content: "";
   background: var(--main-color);
@@ -116,8 +119,6 @@
 }
 
 .save-button:focus-visible {
-  box-shadow: 2px 2px 0 0 var(--main-color);
-  transition: ease 0.3s;
 }
 
 .save-button:hover .floppy {
@@ -132,30 +133,28 @@
 
 /*Шаг 9 фокус на кнопке с сердцем*/
 .card__icon-button:focus {
-  outline: none;
 }
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--main-color);
-  transition: 0.3s ease;
   block-size: 32px;
 }
 
 /* Шаг 10 Подготовка SVG"*/
 
 .contour {
-  transition: 0.3s;
+  transition: 0.1s linear;
 }
 
 .main-body {
   opacity: 0;
-  transition: 0.3s;
+  transition: 0.3s linear;
 }
 
 .core {
   opacity: 0;
   transition-delay: 0.03s;
-  transition: 0.3s;
+  transition: 0.3s linear;
 }
 
 .sparks {
@@ -165,58 +164,66 @@
 /* Шаг 11 Анимация сердца"*/
 
 .card__icon-button:hover .core {
-  transition-delay: 0.03s;
-  transition: 0.3s;
+  transition: 0.3s linear;
   opacity: 1;
 }
 
 .card__icon-button:hover .main-body {
+  animation-timing-function: linear;
   transition-delay: 0.05s;
-  transition: 0.3s;
+  transition: 0.3s linear;
   opacity: 1;
 }
 
 .card__icon-button:active .core {
   --core-fill: #ff0000;
-  transition-delay: 0.03s;
-  transition: 0.3s;
+  animation-timing-function: linear;
+  transition: 0.3s linear;
   opacity: 1;
 }
 
 .card__icon-button:active .main-body {
   --main-body-fill: #ff0000;
+  animation-timing-function: linear;
   transition-delay: 0.05s;
   transition: 0.3s;
   opacity: 1;
 }
 
-.card__icon-button:active .contour {
-  --heart-contour: #ff0000;
-  transition-delay: 0.06s;
-  transition: 0.3s;
+.like-icon.is-liked .core {
+  --core-fill: #ff0000;
+  transition: 0.3s linear;
+  opacity: 1;
 }
 
-.like-icon.is-liked:active .contour,
-.like-icon.is-liked:active .main-body,
-.like-icon.is-liked:active .core {
-  animation: scale-icon 0.3s 0.1s ease-in alternate;
-}
-
-.like-icon.is-liked:active .sparks {
-  animation: sparks 0.3s 0.3s ease-in alternate;
+.like-icon.is-liked .main-body {
+  --main-body-fill: #ff0000;
+  transition: 0.3s linear;
+  opacity: 1;
 }
 
 .like-icon.is-liked .contour {
-  transform: 0.1s;
+  --heart-contour: #ff0000;
+  transition-delay: 0.06s;
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.like-icon.is-liked .sparks {
+  --heart-sparks: #ff0000;
+  transition-delay: 0.06s;
+  transition: 0.3s linear;
+  opacity: 0;
+  animation: sparks 0.3s 0.3s ease-in alternate;
+}
+
+.like-icon.is-liked .heart {
+  animation: scale-icon 0.3s 0.1s ease-in alternate;
 }
 
 @keyframes scale-icon {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1.1);
+  to {
+    scale: 1.1;
   }
 }
 

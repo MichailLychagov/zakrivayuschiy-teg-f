@@ -11,14 +11,15 @@
   --lable-font-size: 14px;
   --button-font-size: 14px;
   --main-line-height: 21px;
+  --title-line-height: 14px;
   --content-text-shadow: #fff;
   --main-color: #000;
   --color-button-text: #fff;
   --accent-background-color: #fff;
-  --header-title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  --header-subtitle-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --logo-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --header-title-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --content-inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
-  --content-block-size: clamp(20.4375rem, 19.6673rem + 3.2864vw, 22.625rem);
+  --content-block-size: clamp(20.4375rem, 19.5572rem + 3.7559vw, 22.9375rem);
   --background-gradient-color: repeating-linear-gradient(
       to bottom,
       #d3d3d3,
