@@ -118,9 +118,6 @@ button:focus-visible {
   transform: translateX(0%);
 }
 
-.save-button:focus-visible {
-}
-
 .save-button:hover .floppy {
   mix-blend-mode: difference;
   z-index: 2;
@@ -132,8 +129,6 @@ button:focus-visible {
 }
 
 /*Шаг 9 фокус на кнопке с сердцем*/
-.card__icon-button:focus {
-}
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--main-color);

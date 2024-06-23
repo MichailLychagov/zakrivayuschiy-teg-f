@@ -141,7 +141,7 @@
 label {
   position: absolute;
   z-index: 2;
-  font-family: var(--content-font), sans-serif;
+  font-family: var(--content-font);
   font-size: var(--lable-font-size);
   color: var(--main-color);
   text-transform: uppercase;
@@ -299,7 +299,6 @@ dialog:not([open]) {
   display: flex;
   flex-direction: column;
   position: relative;
-  border: none;
   border: 2px solid var(--main-color);
   inline-size: 257px;
   background: transparent;
