@@ -21,10 +21,6 @@
   transition: ease 0.3s;
 }
 
-.theme-menu:hover {
-  transition: ease 0.3s;
-}
-
 .theme-menu__button:hover {
   opacity: 0.6;
 }
@@ -78,14 +74,12 @@ button:focus {
   outline: none;
 }
 
-button:focus-visible {
+.overlay:focus-visible {
   box-shadow: 2px 2px 0 0 var(--main-color);
-  transition: ease 0.3s;
 }
 
-/*кнопка like*/
-
-.card__like-button:after {
+/*состояние кнопок like, save, dialog*/
+.overlay:after {
   content: "";
   position: absolute;
   background: var(--main-color);
@@ -94,36 +88,11 @@ button:focus-visible {
   transition: 0.5s ease-in-out;
 }
 
-.card__like-button:hover:after {
+.overlay:hover:after {
   transform: translateX(0%);
 }
 
 .button__text:hover {
-  mix-blend-mode: difference;
-  z-index: 2;
-}
-
-/*состояния кнопки save*/
-
-.save-button:after {
-  content: "";
-  background: var(--main-color);
-  position: absolute;
-  transform: translateX(-100%);
-  inset: 0;
-  transition: 0.5s ease-in-out;
-}
-
-.save-button:hover:after {
-  transform: translateX(0%);
-}
-
-.save-button:hover .floppy {
-  mix-blend-mode: difference;
-  z-index: 2;
-}
-
-.save-button:hover .save-button-link {
   mix-blend-mode: difference;
   z-index: 2;
 }
@@ -230,24 +199,4 @@ button:focus-visible {
   100% {
     opacity: 1;
   }
-}
-
-/*Шаг 12 Анимация Диалог*/
-
-.confirm:after {
-  content: "";
-  position: absolute;
-  background: var(--main-color);
-  transform: translateX(-100%);
-  inset: 0;
-  transition: 0.5s ease-in-out;
-}
-
-.confirm:hover:after {
-  transform: translateX(0%);
-}
-
-.confirm__text:hover {
-  mix-blend-mode: difference;
-  z-index: 2;
 }

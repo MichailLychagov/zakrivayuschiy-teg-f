@@ -27,7 +27,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--content-font-variable);
-  font-variation-settings: "wdth" var(--content-font-width);
+  font-variation-settings: "wght" var(--content-text-weight, 400);
   color: var(--main-color);
   background-color: var(--accent-background-color);
   background-image: var(--background-gradient-color);
@@ -35,7 +35,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  gap: 100px;
+}
+
+button {
+  transition: ease 0.3s;
 }
 
 /*верствка header*/
@@ -51,6 +54,7 @@
   font-family: var(--content-font);
   text-transform: uppercase;
   inline-size: 100%;
+  margin-bottom: 100px;
 }
 
 .logo {
@@ -93,6 +97,7 @@
   display: grid;
   justify-content: center;
   gap: 50px;
+  margin-bottom: 100px;
 }
 
 .article {
@@ -106,7 +111,7 @@
 
 .article__title {
   font-family: var(--content-font-variable);
-  font-variation-settings: "wdth" var(--content-font-width);
+  font-variation-settings: "wght" var(--content-title-weight, 700);
   inline-size: 100%;
   padding: 3px 10px;
   background-color: var(--accent-background-color);
@@ -129,7 +134,7 @@
 
 .paragraph {
   font-family: var(--content-font-variable);
-  font-variation-settings: "wdth" var(--content-font-width);
+  font-variation-settings: "wght" var(--content-text-weight, 400);
   font-size: var(--content-font-size);
   background-color: var(--accent-background-color);
   line-height: var(--main-line-height);
@@ -170,19 +175,20 @@ button {
 
 .feedback {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
+  gap: 9px;
   margin: 25px 25px 25px 0;
   max-height: 38px;
-  gap: 7px;
 }
 
 .card__icon-button {
   display: flex;
-  padding: 0;
   background: transparent;
   border: none;
   block-size: 38px;
   align-self: center;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .card__like-button {
@@ -240,9 +246,11 @@ button {
 }
 
 .like-icon {
-  inline-size: 37px;
-  block-size: 32px;
+  inline-size: 39px;
+  block-size: 36px;
   transition: 0.03s;
+  justify-self: center;
+  align-self: center;
 }
 
 .save__block {
@@ -264,7 +272,7 @@ button {
   color: var(--main-color);
   background: var(--accent-background-color);
   inline-size: 341px;
-  padding: 30px 42px;
+  padding: 28px 40px;
   gap: 30px;
   inset: 0;
 }
@@ -290,7 +298,7 @@ dialog:not([open]) {
   inline-size: 39px;
 }
 
-.dialog-text {
+.dialog__text {
   inline-size: 198px;
   line-height: 150%;
 }
@@ -304,13 +312,6 @@ dialog:not([open]) {
   background: transparent;
   padding: 12.5px 114.5px;
   overflow: hidden;
-}
-
-.confirm__text {
-  color: var(--color-button-text);
-  position: relative;
-  mix-blend-mode: difference;
-  z-index: 2;
 }
 
 /*Шаг 14 Фильтры*/
@@ -360,7 +361,7 @@ dialog:not([open]) {
 
   .header {
     display: flex;
-    min-block-size: 367px;
+    margin-bottom: 107px;
   }
 
   label {

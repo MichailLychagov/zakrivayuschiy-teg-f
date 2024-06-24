@@ -98,7 +98,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="card__like-button overlay" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -157,7 +157,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="card__like-button overlay" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -213,7 +213,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="card__like-button overlay" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -272,7 +272,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="card__like-button overlay" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -332,7 +332,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="card__like-button overlay" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -390,7 +390,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="card__like-button overlay" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -448,7 +448,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="card__like-button overlay" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -507,7 +507,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="card__like-button overlay" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -516,7 +516,7 @@
       <div class="save__block">
         <div class="save">
           <button
-            class="save-button"
+            class="save-button overlay"
             type="button"
             onclick="window['dialog-id'].showModal();"
             aria-controls="dialog-id"
@@ -534,14 +534,16 @@
             <svg viewBox="0 0 39 39" class="floppy">
               <use href="./svg/floppy.svg#floppy"></use>
             </svg>
-            <p class="dialog-text">Вставьте дискету, чтобы продолжить</p>
+            <p class="dialog__text" aria-hidden="true">
+              Вставьте дискету, чтобы продолжить
+            </p>
           </div>
           <button
-            class="confirm"
+            class="confirm overlay"
             type="button"
             onclick="window['dialog-id'].close();"
           >
-            <span class="confirm__text">ОК</span>
+            <span class="button__text">ОК</span>
           </button>
         </dialog>
       </div>

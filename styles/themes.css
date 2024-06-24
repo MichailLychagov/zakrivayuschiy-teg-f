@@ -51,7 +51,7 @@
       transparent 4px
     ),
     linear-gradient(#007f0c 0.01%, #004306);
-  --main-body-fill: #000;
+  --main-body-fill: #00cc14;
   --core-fill: #00cc14;
   --heart-contour: #00cc14;
   --heart-sparks: #ff0000;
@@ -78,7 +78,7 @@
         transparent 4px
       ),
       linear-gradient(#007f0c 0.01%, #004306);
-    --main-body-fill: #000;
+    --main-body-fill: #00cc14;
     --core-fill: #00cc14;
     --heart-contour: #00cc14;
     --heart-sparks: #ff0000;
