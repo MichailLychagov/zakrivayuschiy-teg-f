@@ -37,10 +37,6 @@
   background-position: center;
 }
 
-button {
-  transition: ease 0.3s;
-}
-
 /*верствка header*/
 .header {
   display: flex;
@@ -171,6 +167,7 @@ label {
 /*кнопка like*/
 button {
   cursor: pointer;
+  transition: ease 0.3s;
 }
 
 .feedback {
