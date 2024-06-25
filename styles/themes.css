@@ -6,6 +6,8 @@
 */
 
 :root.theme-light {
+  --content-title-weight: 700;
+  --content-text-weight: 400;
   --main-color: #000;
   --color-button-text: #fff;
   --accent-background-color: #fff;
@@ -32,6 +34,8 @@
 }
 
 :root.theme-dark {
+  --content-title-weight: 785;
+  --content-text-weight: 465;
   --main-color: #00cc14;
   --color-button-text: #00cc14;
   --accent-background-color: #000;
@@ -59,6 +63,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --content-title-weight: 785;
+    --content-text-weight: 465;
     --main-color: #00cc14;
     --accent-background-color: #000;
     fill: #00cc14;

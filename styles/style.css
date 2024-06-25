@@ -27,7 +27,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--content-font-variable);
-  font-variation-settings: "wght" var(--content-text-weight, 400);
+  font-variation-settings: "wght" var(--content-text-weight);
   color: var(--main-color);
   background-color: var(--accent-background-color);
   background-image: var(--background-gradient-color);
@@ -48,6 +48,7 @@
   border: 2px solid var(--main-color);
   background-color: var(--accent-background-color);
   font-family: var(--content-font);
+  font-weight: var(--text-font-weight);
   text-transform: uppercase;
   inline-size: 100%;
   margin-bottom: 100px;
@@ -56,7 +57,7 @@
 .logo {
   font-family: inherit;
   font-size: var(--logo-font-size);
-  font-weight: 400;
+  font-weight: var(--text-font-weight);
   margin-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
 }
 
@@ -65,7 +66,7 @@
   font-size: var(--header-title-font-size);
   line-height: var(--title-line-height);
   margin-block-start: clamp(1.25rem, 1.14rem + 0.4695vw, 1.5625rem);
-  font-weight: 400;
+  font-weight: var(--text-font-weight);
 }
 
 /*кнопки смены стиля*/
@@ -107,7 +108,7 @@
 
 .article__title {
   font-family: var(--content-font-variable);
-  font-variation-settings: "wght" var(--content-title-weight, 700);
+  font-variation-settings: "wght" var(--content-title-weight);
   inline-size: 100%;
   padding: 3px 10px;
   background-color: var(--accent-background-color);
@@ -130,7 +131,7 @@
 
 .paragraph {
   font-family: var(--content-font-variable);
-  font-variation-settings: "wght" var(--content-text-weight, 400);
+  font-variation-settings: "wght" var(--content-text-weight);
   font-size: var(--content-font-size);
   background-color: var(--accent-background-color);
   line-height: var(--main-line-height);
@@ -211,6 +212,7 @@ button {
   mix-blend-mode: difference;
   z-index: 2;
   font-family: var(--content-font);
+  font-weight: var(--text-font-weight);
   font-size: var(--button-font-size);
   text-decoration: none;
   line-height: 12.6px;
@@ -298,6 +300,7 @@ dialog:not([open]) {
 .dialog__text {
   inline-size: 198px;
   line-height: 150%;
+  font-weight: var(--text-font-weight);
 }
 
 .confirm {
